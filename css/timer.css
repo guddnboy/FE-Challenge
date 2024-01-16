@@ -1,0 +1,32 @@
+#displayTime {
+    padding: 10px;
+    width: 200px;
+    border-style: solid;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#btns {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#timer {
+    text-align: center;
+    width: 50%;
+    height: auto;
+    border-style: solid;
+    border-radius: 5px;
+    
+}
+button {
+    width: auto;
+    height : 30px;
+    font-size: 100%;
+    background-color: white;
+}
