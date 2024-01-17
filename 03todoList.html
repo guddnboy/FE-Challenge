@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOLIST</title>
+    <link rel="stylesheet" href="css/03todoList.css">
+</head>
+<body>
+    <h2>TO-DO LIST</h2>
+   <div id="category">
+        <button id="total">전체</button>
+        <button id="done">완료</button>
+        <button id="notDone">미완료</button>
+    </div>
+
+    <div id="content">
+        <input type="text" id="inputContent" placeholder="할 일을 작성해주세요">
+        <input type="button" id="low" value="낮음">
+        <input type="button" id="medium" value="중간">
+        <input type="button" id="high" value="높음">
+        <input type="button" id="highest" value="매우높음">
+        <input type="button" id="add" onclick="adding" value="추가">
+    </div>
+
+    <div id="displayList">
+        <div id="todolist"></div>
+    </div>
+    <script src="js/03todoList.js"></script>
+</body>
+</html>
