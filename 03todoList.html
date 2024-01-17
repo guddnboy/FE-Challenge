@@ -8,24 +8,17 @@
 </head>
 <body>
     <h2>TO-DO LIST</h2>
-   <div id="category">
-        <button id="total">전체</button>
-        <button id="done">완료</button>
-        <button id="notDone">미완료</button>
-    </div>
 
     <div id="content">
         <input type="text" id="inputContent" placeholder="할 일을 작성해주세요">
-        <input type="button" id="low" value="낮음">
-        <input type="button" id="medium" value="중간">
-        <input type="button" id="high" value="높음">
-        <input type="button" id="highest" value="매우높음">
-        <input type="button" id="add" onclick="adding" value="추가">
+        <input type="radio" class="priorityBtn" name="priority" value="낮음">낮음
+        <input type="radio" class="priorityBtn" name="priority" value="중간">중간
+        <input type="radio" class="priorityBtn" name="priority" value="높음">높음
+        <input type="radio" class="priorityBtn" name="priority" value="매우높음">매우높음
+        <button id="add">추가</button>
     </div>
+    <div id="todolist"></div>
 
-    <div id="displayList">
-        <div id="todolist"></div>
-    </div>
     <script src="js/03todoList.js"></script>
 </body>
 </html>
