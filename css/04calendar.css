@@ -1,0 +1,28 @@
+
+#prevMonth,
+#nextMonth {
+    background-color: white;
+    border: none;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#prevMonth:hover,
+#nextMonth:hover {
+    background-color: gray;
+    border-radius: 30%;
+}
+
+.top {
+    text-align: center;
+    height: 100px;
+    font-size: 50px;
+}
+
+#currentDate{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
