@@ -7,13 +7,24 @@
     <link rel="stylesheet" href="css/04calendar.css">
 </head>
 <body>
-    <div class="top">
-        <input type="button" id="prevMonth" onclick="prevMonth()" value="<">
-        <span id="currentDate">0000년00월00일</span>
-        <input type="button" id="nextMonth" onclick="nextMonth()" value=">">
-    </div>
     <div class="calendar">
-        <div class="calendar" id="year"></div>
+        <div class="top">
+            <input type="button" id="prevMonth" onclick="prevMonth()" value="<">
+            <span id="currentDate">0000년00월00일</span>
+            <input type="button" id="nextMonth" onclick="nextMonth()" value=">">
+        </div>
+        <div class="main">
+            <div class="days">
+                <div class="day">MON</div>
+                <div class="day">TUE</div>
+                <div class="day">WED</div>
+                <div class="day">THURS</div>
+                <div class="day">FRI</div>
+                <div class="day">SAT</div>
+                <div class="day">SUN</div>
+            </div>
+        </div>
+        <div class="dates"></div>
     </div>
 
     <script src="js/04calendar.js">
