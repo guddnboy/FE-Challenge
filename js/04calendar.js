@@ -1,65 +1,52 @@
-const date = new Date();
+let date = new Date();
 
-const currentYear = date.getFullYear();
-const currentMonth = date.getMonth() + 1;
+var renderCalendar = () =>{
 
-displayDate();
+    var currentYear = date.getFullYear();
+    var currentMonth = date.getMonth() + 1;
 
-const prevLast = new Date(currentYear, currentMonth - 1,0);
-const thisLast = new Date(currentYear, currentMonth, 0);
+    var prevLast = new Date(currentYear, currentMonth - 1,0);
+    var thisLast = new Date(currentYear, currentMonth, 0);
 
-const PLDate = prevLast.getDate();
-const PLDay = prevLast.getDay();
+    var PLDate = prevLast.getDate();
+    var PLDay = prevLast.getDay();
 
-const TLDate = thisLast.getDate();
-const TLDay = thisLast.getDay();
+    var TLDate = thisLast.getDate();
+    var TLDay = thisLast.getDay();
 
-const prevDates = [];
-const thisDates = [...Array(TLDate + 1).keys()].slice(1);
-const nextDates = [];
+    var prevDates = [];
+    var thisDates = [...Array(TLDate + 1).keys()].slice(1);
+    var nextDates = [];
 
-if (PLDay !== 6){
-    for (let i = 0; i < PLDay + 1; i++){
-        prevDates.unshift(PLDate - 1);
-    }
-}
-
-for (let i =1; i < 7 - TLDay; i++) {
-    nextDates.push(i);
-}
-
-const dates = prevDates.concat(thisDates,nextDates);
-
-dates.forEach((date,i) => {
-    dates[i] = `<div class="date">${date}</div>`;
-});
-
-document.querySelector('.dates').innerHTML = dates.join('');
-
-
-function displayDate(){
-    document.getElementById('currentDate').innerText = currentYear + "년"+ currentMonth + "월";    
-}
-
-function nextMonth(){
-    if (currentMonth == 12){
-        currentYear += 1;
-        currentMonth = 1;
-    }
-    else {
-        currentMonth += 1;
-    }
-    displayDate();
-}
-
-function prevMonth(){
-    if (currentMonth == 1){
-        currentYear -= 1;
-        currentMonth = 12;
-    } 
-    else {
-        currentMonth -= 1;
+    if (PLDay !== 6){
+        for (let i = 0; i < PLDay + 1; i++){
+            prevDates.unshift(PLDate - i);
+        }
     }
 
-    displayDate();
+    for (let i =1; i < 7 - TLDay; i++) {
+        nextDates.push(i);
+    }
+
+    var dates = prevDates.concat(thisDates,nextDates);
+
+    dates.forEach((date,i) => {
+        dates[i] = `<div class="date">${date}</div>`;
+    });
+
+    document.querySelector('#currentDate').innerText = `${currentYear}년 ${currentMonth}월`;
+    document.querySelector('.dates').innerHTML = dates.join('');
+
+}
+
+renderCalendar();
+
+const prevMonth = () => {
+    date.setMonth(date.getMonth() - 1);
+    renderCalendar();
+}
+
+const nextMonth = () => {
+    date.setMonth(date.getMonth() + 1);
+    renderCalendar();
 }
