@@ -30,9 +30,16 @@ var renderCalendar = () =>{
 
     var dates = prevDates.concat(thisDates,nextDates);
 
-    dates.forEach((date,i) => {
-        dates[i] = `<div class="date">${date}</div>`;
-    });
+    // Dates 정리
+    const firstDateIndex = dates.indexOf(1);
+    const lastDateIndex = dates.lastIndexOf(TLDate);
+    dates.forEach((date, i) => {
+        const condition = i >= firstDateIndex && i < lastDateIndex + 1
+                        ? 'this'
+                        : 'other';
+
+        dates[i] = `<div class="date"><span class="${condition}">${date}</span></div>`;
+    })
 
     document.querySelector('#currentDate').innerText = `${currentYear}년 ${currentMonth}월`;
     document.querySelector('.dates').innerHTML = dates.join('');
