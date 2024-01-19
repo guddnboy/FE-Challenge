@@ -1,14 +1,15 @@
 #logo{
     width :135px;
-    height:50px;
+    height:49px;
     display: inline;
     float: left;
+    margin: 0 0 0 20px;
 }
 
 .header{
     justify-content: space-between;
     margin-bottom: 5px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid rgb(171, 177, 177);
 }
 
 #content-category{
@@ -19,6 +20,12 @@
 #subcategory{
     display: inline-block;
     float: right;
+    margin-right: 20px;
+}
+#sign-up,
+#login,
+#guest {
+    color : rgb(23, 161, 255);
 }
 
 .main{
@@ -37,15 +44,16 @@
 #main_img_r_1_T_temporary_small{
     width: 296px;
     height: 400px;
-    margin: 10px;
     border-radius: 8px;
+    margin: 10px;
 }
 
 li {
     display: inline-block;
     list-style: none;
-    color: lightgray;
+    color: rgb(171, 177, 177);
     margin: 0 8px 0 8px;
+    font-weight: 400px;
 }
 
 body {
@@ -58,4 +66,8 @@ body {
     vertical-align: baseline;
     min-height: 100vh;
     font-size: 0.875rem;
+}
+.banner {
+    display: flex;
+    margin: 15px 0 0 17%;
 }
