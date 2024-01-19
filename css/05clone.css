@@ -2,25 +2,23 @@
     width :135px;
     height:50px;
     display: inline;
+    float: left;
 }
 
 .header{
-    display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
     border-bottom: 1px solid lightgray;
 }
 
 #content-category{
-    left: auto;
+    display: inline-block;
+    /* float: left; */
 }
 
 #subcategory{
+    display: inline-block;
     float: right;
-}
-
-ul {
-    display: inline;
 }
 
 li {
