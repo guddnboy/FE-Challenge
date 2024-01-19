@@ -119,3 +119,7 @@ body {
     height: 100%;
     border-radius: 8px;
 }
+
+.details-title{
+    margin : 0;
+}
