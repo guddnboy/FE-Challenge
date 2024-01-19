@@ -21,9 +21,41 @@
     float: right;
 }
 
+.main{
+    align-items: center;
+    display: flex;
+    margin: 20px;
+}
+
+#main_img_1{
+    width: 616px;
+    height: 400px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+#main_img_r_1_T_temporary_small{
+    width: 296px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
 li {
     display: inline-block;
     list-style: none;
     color: lightgray;
-    margin: 5px;
+    margin: 0 8px 0 8px;
+}
+
+body {
+    font-family: "Noto Sans", "Noto Sans KR", sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    line-height: 1.5;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: baseline;
+    min-height: 100vh;
+    font-size: 0.875rem;
 }
