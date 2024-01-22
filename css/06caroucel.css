@@ -1,6 +1,7 @@
 body{
     text-align: center;
     align-items: center;
+    margin: 0 32%;
 }
 
 img {
@@ -12,6 +13,11 @@ button {
     border: none;
     height: 50px;
     width: 50px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: lightgray;
 }
 
 .caroucel {
@@ -30,4 +36,10 @@ button {
 .imgs {
     width: 400px;
     height: 200px;
+}
+
+#main{
+    width: 100%;
+    height: auto;
+    display: inline;
 }
