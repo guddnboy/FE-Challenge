@@ -1,0 +1,33 @@
+body{
+    text-align: center;
+    align-items: center;
+}
+
+img {
+    width: 400px;
+    height: 200px;
+}
+
+button {
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+
+.caroucel {
+    overflow: hidden;
+    width: 400px;
+    height: 200px;
+}
+
+.content-list {
+    display: flex;
+    margin: 5px;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.2s;
+}
+
+.imgs {
+    width: 400px;
+    height: 200px;
+}
