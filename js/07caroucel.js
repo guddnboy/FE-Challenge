@@ -4,27 +4,30 @@ const nextBtn = document.querySelector('#nextBtn');
 const imgs = document.querySelector('.imgs');
 let cnt = 0;
 
-prevBtn.addEventListener('click', prev());
-nextBtn.addEventListener('click', next());
+prevBtn.addEventListener('click', ()=>{
+    if (cnt === 0){
+        cnt= 2;
+        console.log(`${cnt}`, `translateX(-${370 * cnt}px)`);
+        imgs.style.transform = `translateX(-${370 * cnt}px)`;
+    }
 
-function next(){
-    if (cnt === 3){
+    else{
+        console.log(`${cnt}`, `translateX(-${370 * cnt}px)`);
+        cnt -= 1;
+        imgs.style.transform = `translateX(-${370 * cnt}px)`;
+    }
+
+});
+
+nextBtn.addEventListener('click', ()=>{
+    if (cnt === 2){
+        console.log(`${cnt}`, `translateX(-${370 * cnt}px)`);
         cnt = 0;
-        imgs.style.transfrom = `translate3d(0, 0, 0)`;
+        imgs.style.transform = `translateX(0)`;
     }
     else{
         cnt += 1;
-        imgs.style.transfrom = `translate3d(-${370 * cnt}px, 0, 0)`;
+        console.log(`${cnt}`, `translateX(-${370 * cnt}px)`);
+        imgs.style.transform = `translateX(-${370 * cnt}px)`;
     }
-}
-
-function prev(){
-    if (cnt === -1){
-        cnt = 2;
-        imgs.style.transfrom = `translate3d(-${370 * cnt}px, 0, 0)`;
-    }
-    else{
-        cnt -= 1;
-        imgs.style.transfrom = `translate3d(-${370 * cnt}px, 0, 0)`;
-    }
-}
+});

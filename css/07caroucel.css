@@ -1,9 +1,3 @@
-
-img{
-    width: 100%;
-    height: 100%;
-}
-
 .imgs{
     width: 370px;
     height: 200px;
@@ -12,6 +6,7 @@ img{
     transform: translate3d(0, 0, 0);
     transition: transform 0.2s;
 }
+
 
 
 button{
