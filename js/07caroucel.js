@@ -4,10 +4,12 @@ const nextBtn = document.querySelector('#nextBtn');
 const imgs = document.querySelector('.imgs');
 let cnt = 0;
 
-prevBtn.addEventListener('click', ()=>{
+prevBtn.addEventListener('click',prev);
+nextBtn.addEventListener('click',next);
+
+function prev(){
     if (cnt === 0){
         cnt= 2;
-        console.log(`${cnt}`, `translateX(-${370 * cnt}px)`);
         imgs.style.transform = `translateX(-${370 * cnt}px)`;
     }
 
@@ -16,10 +18,9 @@ prevBtn.addEventListener('click', ()=>{
         cnt -= 1;
         imgs.style.transform = `translateX(-${370 * cnt}px)`;
     }
+}
 
-});
-
-nextBtn.addEventListener('click', ()=>{
+function next(){
     if (cnt === 2){
         console.log(`${cnt}`, `translateX(-${370 * cnt}px)`);
         cnt = 0;
@@ -30,4 +31,6 @@ nextBtn.addEventListener('click', ()=>{
         console.log(`${cnt}`, `translateX(-${370 * cnt}px)`);
         imgs.style.transform = `translateX(-${370 * cnt}px)`;
     }
-});
+}
+
+setInterval(next, 2000);

@@ -1,13 +1,29 @@
+html,
+body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .imgs{
     width: 370px;
     height: 200px;
     display: flex;
-    overflow: hidden;
     transform: translate3d(0, 0, 0);
     transition: transform 0.2s;
 }
 
-
+.content{
+    overflow: hidden;
+    width: 370px;
+    height: 200px;
+}
 
 button{
     width: 100px;
@@ -22,13 +38,14 @@ button:hover{
 }
 
 #prevBtn{
-    left: 10%;
+    
 }
 
 #nextBtn{
-    right: 10%;
+
 }
 
 .caroucel-wrapper {
-    text-align: center;
+    display: flex;
+    align-items: center;
 }
