@@ -11,7 +11,10 @@ img{
     overflow: hidden;
     display: flex;
     position: absolute;
-    left: 25%;
+    top: 25%;
+    left: 35%;
+    transform: translate3d(0,0,0);
+    transition: transform 0.2s;
 }
 
 button{
@@ -21,7 +24,7 @@ button{
     background-color: white;
     border: none;
     position: absolute;
-    top: 10%;
+    top: 35%;
 }
 
 button:hover{
