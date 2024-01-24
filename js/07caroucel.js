@@ -14,7 +14,6 @@ function prev(){
     }
 
     else{
-        console.log(`${cnt}`, `translateX(-${370 * cnt}px)`);
         cnt -= 1;
         imgs.style.transform = `translateX(-${370 * cnt}px)`;
     }
@@ -22,13 +21,11 @@ function prev(){
 
 function next(){
     if (cnt === 2){
-        console.log(`${cnt}`, `translateX(-${370 * cnt}px)`);
         cnt = 0;
         imgs.style.transform = `translateX(0)`;
     }
     else{
         cnt += 1;
-        console.log(`${cnt}`, `translateX(-${370 * cnt}px)`);
         imgs.style.transform = `translateX(-${370 * cnt}px)`;
     }
 }
