@@ -4,6 +4,9 @@ const nextBtn = document.querySelector('#nextBtn');
 const imgs = document.querySelector('.imgs');
 let cnt = 0;
 
+
+setInterval(next, 2000);
+
 prevBtn.addEventListener('click',prev);
 nextBtn.addEventListener('click',next);
 
@@ -24,10 +27,9 @@ function next(){
         cnt = 0;
         imgs.style.transform = `translateX(0)`;
     }
+    
     else{
         cnt += 1;
         imgs.style.transform = `translateX(-${370 * cnt}px)`;
     }
 }
-
-setInterval(next, 2000);
