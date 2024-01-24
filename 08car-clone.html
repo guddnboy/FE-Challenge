@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/05clone.css">
+    <link rel="stylesheet" href="css/05clone.css"/>
+    <link rel="stylesheet" href="css/07caroucel.css"/>
 </head>
 <body>
+
     <div class="header">
         <img src="img/miniintern.png" alt="미니인턴 로고 이미지" id="logo"/>
         <ul id="content-category">
@@ -26,7 +28,17 @@
 
     <div class="main">
         <div class="banner">
-            <img src="img/main_img_1.webp" id="main_img_1" alt="미니인턴 배너 이미지"/>
+            <div class="caroucel-wrapper">
+                <button type="button" id="prevBtn"><</button>
+                <div class="content">
+                    <div class="imgs">
+                        <img src="img/chihiro049.jpg"/>
+                        <img src="img/HOWL.jpeg"/>
+                        <img src="img/kimitachi007.jpg"/>
+                    </div>
+                </div>
+                <button type="button" id="nextBtn">></button>
+            </div>
             <!-- <span id="main_img_1_font" color ="white">최대한의 효율로 직무경험을 쌓아보세요</span> -->
             <img src="img/main_img_r_1_T_temporary_small.png" id="main_img_r_1_T_temporary_small" alt="작은 배너"/>
         </div>
@@ -90,5 +102,6 @@
             </ul>
         </div>
     </div>
+    <script src="js/07caroucel.js"></script>
 </body>
 </html>

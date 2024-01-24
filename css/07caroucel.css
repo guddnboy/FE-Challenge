@@ -6,7 +6,6 @@ body{
 
 body{
     margin: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -35,14 +34,6 @@ button{
 
 button:hover{
     background-color: lightgray;
-}
-
-#prevBtn{
-    
-}
-
-#nextBtn{
-
 }
 
 .caroucel-wrapper {
