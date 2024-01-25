@@ -64,7 +64,7 @@ button{
 
 .show-menu{
     display: none;
-    
+
 }
 
 @media screen and (max-width: 600px) {
@@ -82,4 +82,42 @@ button{
         display: none;
     }
     
+}
+
+#side-menu {
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    background-color: gray;
+    padding: 60px 20px 20px 20px;
+    box-sizing: border-box;
+    transform: rotate3d(0,0,0);
+
+  }
+
+
+/* 기존 CSS 코드에 추가할 부분 */
+.side-menu {
+    display: none; /* 처음에는 숨겨둠 */
+    width: 100%;
+    background-color: gray;
+}
+
+.side-menu.show-side-menu {
+    display: block;
+}
+
+.side-menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.side-item {
+    padding: 10px;
+    color: white;
+}
+
+/* 추가된 부분 */
+.side-item:hover {
+    background-color: lightgray;
 }
